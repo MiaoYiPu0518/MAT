@@ -80,7 +80,8 @@ export default function RootLayout({
               </div>
               <div>
                 <h3 className="text-xl font-bold mb-5">关注我们</h3>
-                <div className="w-[100px] h-[100px] bg-white mb-2"></div>
+                {/* <div className="w-[100px] h-[100px] bg-white mb-2"></div> */}
+                <img src="/assets/images/QR_code.jpg" alt="QR Code" className="w-[100px] h-[100px] mb-2" />
                 <p className="text-gray-300">微信公众号</p>
               </div>
             </div>
