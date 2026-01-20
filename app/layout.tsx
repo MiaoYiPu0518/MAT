@@ -19,7 +19,7 @@ export default function RootLayout({
     <html lang="zh-CN">
       <body className={`${inter.className} antialiased`}>
         <header className="fixed top-0 w-full bg-[#002D5B]/95 backdrop-blur-md z-[1000] text-white py-4">
-          <div className="max-w-[1200px] mx-auto px-5 flex justify-between items-center">
+          <div className="container mx-auto px-5 flex justify-between items-center">
             <div className="flex items-center">
               <Link href="/">
                 <img
@@ -63,7 +63,7 @@ export default function RootLayout({
         </main>
 
         <footer className="bg-dark-bg text-white py-15">
-          <div className="max-w-[1200px] mx-auto px-5">
+          <div className="container mx-auto px-5">
             <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
               <div>
                 <h3 className="text-xl font-bold mb-5">关于摩安</h3>
