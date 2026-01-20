@@ -146,7 +146,7 @@ export default function Home() {
             {[
               {
                 title: "在线摩擦治理",
-                desc: "是一项金属表面工程技术和润滑技术相融合的机械装备在线摩擦治理工艺技术。",
+                desc: "金属表面工程技术和润滑技术相融合的机械装备在线摩擦治理工艺技术。",
                 icon: "⚙️"
               },
               {
@@ -172,6 +172,92 @@ export default function Home() {
                 </p>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Products Section */}
+      <section className="py-24 relative overflow-hidden">
+        <div className="container mx-auto px-5 relative z-10">
+          <div className="text-center mb-16 reveal">
+            <div className="inline-block mb-4">
+              <h2 className="text-4xl font-bold text-primary-blue mb-1">MAT产品</h2>
+              <div className="text-sm font-medium text-gray-400 tracking-[0.2em]">MAT PRODUCTS</div>
+              <div className="h-0.5 w-full bg-accent-blue mt-4"></div>
+            </div>
+            <p className="max-w-5xl mx-auto text-gray-600 leading-8 mt-8 text-lg">
+              针对不同的应用场景，MAT产品包括风电齿轮箱再生强化剂、铁路机车齿轮箱再生强化剂、工业机器人RV减速器专用脂、机车柴油机再生强化剂、焕升原动力汽车健康宝系列、轴承再生强化脂、机车轮缘减摩棒、轨侧专用减摩润滑脂、等液态、脂和固态三种形态系列产品。
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 reveal">
+            {[
+              {
+                title: "凝胶产品系列",
+                image: "/assets/images/prod-gel.png",
+                link: "/products"
+              },
+              {
+                title: "脂润滑系列",
+                image: "/assets/images/prod-grease.png",
+                link: "/products"
+              },
+              {
+                title: "固态产品系列",
+                image: "/assets/images/prod-solid.png",
+                link: "/products"
+              }
+            ].map((prod, idx) => (
+              <Link
+                key={idx}
+                href={prod.link}
+                className="flex flex-col group border-4 border-secondary-blue/10 overflow-hidden shadow-lg hover:shadow-2xl hover:border-accent-blue/30 transition-all duration-500"
+              >
+                <div className="relative aspect-[4/3] overflow-hidden">
+                  <img
+                    src={prod.image}
+                    alt={prod.title}
+                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                  />
+                  <div className="absolute inset-0 bg-black/5 group-hover:bg-black/0 transition-colors duration-500"></div>
+                </div>
+                <div className="bg-secondary-blue py-4 text-center group-hover:bg-accent-blue transition-colors duration-500">
+                  <h3 className="text-white text-xl font-bold tracking-wider">
+                    {prod.title}
+                  </h3>
+                </div>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Certification Section */}
+      <section className="py-24 bg-gray-light">
+        <div className="container mx-auto px-5">
+          <div className="max-w-4xl mx-auto text-center reveal">
+            <div className="inline-block mb-10">
+              <h2 className="text-3xl md:text-4xl font-bold text-primary-blue mb-2">MAT认证与鉴定证书</h2>
+              <div className="text-sm font-medium text-gray-400 tracking-[0.2em] uppercase">MAT CERTIFICATION AND APPRAISAL CERTIFICATE</div>
+              <div className="h-0.5 w-1/2 mx-auto bg-accent-blue mt-4"></div>
+            </div>
+            <div className="flex flex-wrap justify-center gap-8 mb-12">
+              <div className="bg-white p-2 shadow-md rounded-lg transform hover:scale-105 transition-transform duration-300">
+                <img src="/assets/images/cert1.png" alt="MAT Certificate 1" className="h-48 md:h-64 w-auto object-contain" />
+              </div>
+              <div className="bg-white p-2 shadow-md rounded-lg transform hover:scale-105 transition-transform duration-300">
+                <img src="/assets/images/cert2.png" alt="MAT Certificate 2" className="h-48 md:h-64 w-auto object-contain" />
+              </div>
+              <div className="bg-white p-2 shadow-md rounded-lg transform hover:scale-105 transition-transform duration-300">
+                <img src="/assets/images/cert3.png" alt="MAT Certificate 3" className="h-48 md:h-64 w-auto object-contain" />
+              </div>
+            </div>
+
+            <div className="bg-white p-10 md:p-16 rounded-3xl shadow-[0_20px_50px_rgba(0,0,0,0.05)] border border-white">
+              <p className="text-lg md:text-xl text-text-main leading-relaxed font-light">
+                MAT金属表面自生强化技术产品通过了高科技成果鉴定，得到了原铁道部、中国设备管理协会、国家自然科学基金、国家发改委的认可和推广，包括中央电视台在内的诸多权威媒体都做了深度报道，在多个领域取得了大量的实车运用报告，为MAT工业化运用奠定了坚实的基础。
+              </p>
+            </div>
           </div>
         </div>
       </section>

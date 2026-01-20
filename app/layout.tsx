@@ -20,8 +20,14 @@ export default function RootLayout({
       <body className={`${inter.className} antialiased`}>
         <header className="fixed top-0 w-full bg-[#002D5B]/95 backdrop-blur-md z-[1000] text-white py-4">
           <div className="max-w-[1200px] mx-auto px-5 flex justify-between items-center">
-            <div className="text-xl font-bold">
-              <Link href="/">MAT Technology</Link>
+            <div className="flex items-center">
+              <Link href="/">
+                <img
+                  src="/images/MAT_logo.png"
+                  alt="MAT Technology Logo"
+                  className="h-10 w-auto"
+                />
+              </Link>
             </div>
             <nav>
               <ul className="flex gap-8">
