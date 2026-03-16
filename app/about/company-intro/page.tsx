@@ -28,7 +28,7 @@ export default function CompanyIntro() {
                                     <li key={link.name}>
                                         <Link
                                             href={link.href}
-                                            className={`block transition-colors ${link.active ? "color-accent-blue font-bold" : "hover:text-accent-blue"
+                                            className={`block transition-colors ${link.active ? "text-accent-blue font-bold" : "hover:text-accent-blue"
                                                 }`}
                                         >
                                             {link.name}

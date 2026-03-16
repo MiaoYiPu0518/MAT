@@ -42,6 +42,11 @@ body {
     @apply bg-accent-blue text-white hover:bg-secondary-blue;
   }
 
+  /* Utility for container with max-width */
+  .container-custom {
+    @apply max-w-[1200px] mx-auto px-5;
+  }
+
   .reveal {
     animation: fadeIn 1s forwards;
   }

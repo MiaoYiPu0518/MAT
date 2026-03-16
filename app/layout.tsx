@@ -18,7 +18,7 @@ export default function RootLayout({
   return (
     <html lang="zh-CN">
       <body className={`${inter.className} antialiased`}>
-        <header className="fixed top-0 w-full bg-[#002D5B]/95 backdrop-blur-md z-[1000] text-white py-4">
+        <header className="fixed top-0 w-full bg-primary-blue/95 backdrop-blur-md z-[1000] text-white py-4">
           <div className="container mx-auto px-5 flex justify-between items-center">
             <div className="flex items-center">
               <Link href="/">
