@@ -242,15 +242,15 @@ export default function Home() {
               <div className="h-0.5 w-1/2 mx-auto bg-accent-blue mt-4"></div>
             </div>
             <div className="flex flex-wrap justify-center gap-8 mb-12">
-              <div className="bg-white p-2 shadow-md rounded-lg transform hover:scale-105 transition-transform duration-300">
+              <Link href="/about/credentials" className="bg-white p-2 shadow-md rounded-lg transform hover:scale-105 transition-transform duration-300 cursor-pointer">
                 <img src="/images/cert1.png" alt="MAT Certificate 1" className="h-48 md:h-64 w-auto object-contain" />
-              </div>
-              <div className="bg-white p-2 shadow-md rounded-lg transform hover:scale-105 transition-transform duration-300">
+              </Link>
+              <Link href="/about/credentials" className="bg-white p-2 shadow-md rounded-lg transform hover:scale-105 transition-transform duration-300 cursor-pointer">
                 <img src="/images/cert2.png" alt="MAT Certificate 2" className="h-48 md:h-64 w-auto object-contain" />
-              </div>
-              <div className="bg-white p-2 shadow-md rounded-lg transform hover:scale-105 transition-transform duration-300">
+              </Link>
+              <Link href="/about/credentials" className="bg-white p-2 shadow-md rounded-lg transform hover:scale-105 transition-transform duration-300 cursor-pointer">
                 <img src="/images/cert3.png" alt="MAT Certificate 3" className="h-48 md:h-64 w-auto object-contain" />
-              </div>
+              </Link>
             </div>
 
             <div className="bg-white p-10 md:p-16 rounded-3xl shadow-[0_20px_50px_rgba(0,0,0,0.05)] border border-white">

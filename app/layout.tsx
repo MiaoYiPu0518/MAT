@@ -37,18 +37,16 @@ export default function RootLayout({
                   <div className="absolute top-full left-0 bg-primary-blue min-w-[200px] hidden group-hover:flex flex-col shadow-lg">
                     <Link href="/about/company-intro" className="px-5 py-3 border-b border-white/10 hover:bg-secondary-blue">公司介绍</Link>
                     <Link href="/about/history" className="px-5 py-3 border-b border-white/10 hover:bg-secondary-blue">公司历程</Link>
-                    <Link href="/about/experts" className="px-5 py-3 border-b border-white/10 hover:bg-secondary-blue">专家介绍</Link>
-                    <Link href="/about/credentials" className="px-5 py-3 hover:bg-secondary-blue">资质荣誉</Link>
+                    <Link href="/about/experts" className="px-5 py-3 hover:bg-secondary-blue">专家介绍</Link>
                   </div>
                 </li>
                 <li className="relative group cursor-pointer text-[15px] font-medium">
                   MAT技术
                   <div className="absolute top-full left-0 bg-primary-blue min-w-[200px] hidden group-hover:flex flex-col shadow-lg">
                     <Link href="/tech/tech-intro" className="px-5 py-3 border-b border-white/10 hover:bg-secondary-blue">技术介绍</Link>
-                    <Link href="/tech/patents" className="px-5 py-3 border-b border-white/10 hover:bg-secondary-blue">科技成果鉴定及专利</Link>
-                    <Link href="/tech/standards" className="px-5 py-3 border-b border-white/10 hover:bg-secondary-blue">推广文件/产品标准</Link>
+                    <Link href="/about/credentials" className="px-5 py-3 border-b border-white/10 hover:bg-secondary-blue">资质荣誉</Link>
                     <Link href="/tech/reports" className="px-5 py-3 border-b border-white/10 hover:bg-secondary-blue">运用报告</Link>
-                    <Link href="/tech/papers" className="px-5 py-3 border-b border-white/10 hover:bg-secondary-blue">学术论文</Link>
+                    <Link href="/tech/papers" className="px-5 py-3 hover:bg-secondary-blue">学术论文</Link>
                   </div>
                 </li>
                 <li><Link href="/products" className="text-[15px] font-medium hover:text-accent-blue">MAT产品</Link></li>
