@@ -3,8 +3,7 @@ import Link from "next/link";
 export default function TechIntro() {
     const sidebarLinks = [
         { name: "技术介绍", href: "/tech/tech-intro", active: true },
-        { name: "科技成果鉴定及专利", href: "/tech/patents" },
-        { name: "推广文件/产品标准", href: "/tech/standards" },
+        { name: "资质荣誉", href: "/about/credentials" },
         { name: "运用报告", href: "/tech/reports" },
         { name: "学术论文", href: "/tech/papers" },
     ];
