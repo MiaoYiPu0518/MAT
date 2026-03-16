@@ -8,31 +8,31 @@ const slides = [
     title: "设备磨损自愈在线解决方案",
     subtitle: "MAT金属表面自生强化技术™",
     desc: "MATехнология® - 为由于运动产生的摩擦和磨损导致的问题提供针对性解决方案。",
-    bg: "/assets/images/banner-1.png"
+    bg: "/images/banner-1.png"
   },
   {
     title: "工业传动全寿命周期摩擦治理方案",
     subtitle: "微纳米设备减摩抗磨技术",
     desc: "涵盖表面抗磨、间隙优化、在线自愈及固液多元润滑的运动副综合优化方案。",
-    bg: "/assets/images/banner-2.png"
+    bg: "/images/banner-2.png"
   },
   {
     title: "焕生原动力·汽车健康宝™",
     subtitle: "发动机·变速箱·差速器系列再生强化剂",
     desc: "固液多元润滑与自愈技术：强化原厂动力，节能降碳，倍增运动件与润滑油使用寿命。",
-    bg: "/assets/images/banner-3.png"
+    bg: "/images/banner-3.png"
   },
   {
     title: "风电机组抗磨提效在线系统解决方案",
     subtitle: "主升速齿轮箱·主轴轴承·电机轴承·偏航舵桨传动系统",
     desc: "通过协同提高发电能力与延长风机寿命，实现全生命周期维护成本的显著降低。",
-    bg: "/assets/images/banner-4.png"
+    bg: "/images/banner-4.png"
   },
   {
     title: "轨道交通装备全寿命周期高效安全运行保障方案",
     subtitle: "柴油机·齿轮箱·轴承箱·轮轨",
     desc: "· 提效· 延寿· 节能· 减排",
-    bg: "/assets/images/banner-5.png"
+    bg: "/images/banner-5.png"
   }
 ];
 
@@ -119,9 +119,9 @@ export default function Home() {
                   className="w-full h-full object-cover"
                   controls
                   playsInline
-                  poster="/assets/images/video-poster.png"
+                  poster="/images/video-poster.png"
                 >
-                  <source src="/assets/videos/Innovation_China.mp4" type="video/mp4" />
+                  <source src="/videos/Innovation_China.mp4" type="video/mp4" />
                   您的浏览器不支持视频播放。
                 </video>
                 <div className="absolute inset-0 bg-blue-500/10 mix-blend-overlay pointer-events-none"></div>
@@ -194,17 +194,17 @@ export default function Home() {
             {[
               {
                 title: "凝胶产品系列",
-                image: "/assets/images/prod-gel.png",
+                image: "/images/prod-gel.png",
                 link: "/products"
               },
               {
                 title: "脂润滑系列",
-                image: "/assets/images/prod-grease.png",
+                image: "/images/prod-grease.png",
                 link: "/products"
               },
               {
                 title: "固态产品系列",
-                image: "/assets/images/prod-solid.png",
+                image: "/images/prod-solid.png",
                 link: "/products"
               }
             ].map((prod, idx) => (
@@ -243,13 +243,13 @@ export default function Home() {
             </div>
             <div className="flex flex-wrap justify-center gap-8 mb-12">
               <div className="bg-white p-2 shadow-md rounded-lg transform hover:scale-105 transition-transform duration-300">
-                <img src="/assets/images/cert1.png" alt="MAT Certificate 1" className="h-48 md:h-64 w-auto object-contain" />
+                <img src="/images/cert1.png" alt="MAT Certificate 1" className="h-48 md:h-64 w-auto object-contain" />
               </div>
               <div className="bg-white p-2 shadow-md rounded-lg transform hover:scale-105 transition-transform duration-300">
-                <img src="/assets/images/cert2.png" alt="MAT Certificate 2" className="h-48 md:h-64 w-auto object-contain" />
+                <img src="/images/cert2.png" alt="MAT Certificate 2" className="h-48 md:h-64 w-auto object-contain" />
               </div>
               <div className="bg-white p-2 shadow-md rounded-lg transform hover:scale-105 transition-transform duration-300">
-                <img src="/assets/images/cert3.png" alt="MAT Certificate 3" className="h-48 md:h-64 w-auto object-contain" />
+                <img src="/images/cert3.png" alt="MAT Certificate 3" className="h-48 md:h-64 w-auto object-contain" />
               </div>
             </div>
 

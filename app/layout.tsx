@@ -38,6 +38,7 @@ export default function RootLayout({
                     <Link href="/about/company-intro" className="px-5 py-3 border-b border-white/10 hover:bg-secondary-blue">公司介绍</Link>
                     <Link href="/about/history" className="px-5 py-3 border-b border-white/10 hover:bg-secondary-blue">公司历程</Link>
                     <Link href="/about/experts" className="px-5 py-3 border-b border-white/10 hover:bg-secondary-blue">专家介绍</Link>
+                    <Link href="/about/credentials" className="px-5 py-3 hover:bg-secondary-blue">资质荣誉</Link>
                   </div>
                 </li>
                 <li className="relative group cursor-pointer text-[15px] font-medium">
@@ -81,7 +82,7 @@ export default function RootLayout({
               <div>
                 <h3 className="text-xl font-bold mb-5">关注我们</h3>
                 {/* <div className="w-[100px] h-[100px] bg-white mb-2"></div> */}
-                <img src="/assets/images/QR_code.jpg" alt="QR Code" className="w-[100px] h-[100px] mb-2" />
+                <img src="/images/QR_code.jpg" alt="QR Code" className="w-[100px] h-[100px] mb-2" />
                 <p className="text-gray-300">微信公众号</p>
               </div>
             </div>

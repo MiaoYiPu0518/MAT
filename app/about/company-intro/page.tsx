@@ -5,6 +5,7 @@ export default function CompanyIntro() {
         { name: "公司介绍", href: "/about/company-intro", active: true },
         { name: "公司历程", href: "/about/history" },
         { name: "专家介绍", href: "/about/experts" },
+        { name: "资质荣誉", href: "/about/credentials" },
     ];
 
     return (
