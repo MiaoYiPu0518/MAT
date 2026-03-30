@@ -29,8 +29,26 @@ To learn more about Next.js, take a look at the following resources:
 
 You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
 
-## Deploy on Vercel
+## Deploying to Static Hosting (COS)
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+The project is configured for static export, making it compatible with Cloud Object Storage (COS) or other static hosting services.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+### 1. Generate Static Export
+
+Run the build script to generate the static files:
+
+```bash
+npm run build
+```
+
+This will create an `out/` directory at the root of the project containing all static HTML, CSS, JS, and media assets.
+
+### 2. Upload to COS
+
+Upload the **contents** of the `out/` directory to your COS bucket. Do not upload the `out/` folder itself, only its contents.
+
+### 3. Bucket Configuration
+
+To ensure the website functions correctly, configure your COS bucket as follows:
+- **Enable Static Website Hosting**: Set the "Index Document" to `index.html`.
+- **404 Page**: Set the "Error Document" to `404.html` (which is also generated in the `out/` directory).
