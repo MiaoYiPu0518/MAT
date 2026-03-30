@@ -16,34 +16,24 @@ export default function Cases() {
     const content = {
         railway: {
             title: "铁路机车领域",
-            desc: "MAT技术于2002年首获铁道部测试，证明其可延长发动机缸套、活塞等部件寿命2-3倍，综合节油2.2%。目前已在铁路系统近1000台机车上得到应用。",
-            bullets: [
-                "某型机车运行115万公里缸套零磨损。",
-                "铁道部发文推广应用。"
-            ]
+            pdf: "/docs/applications/application-railway.pdf"
         },
         wind: {
             title: "风电领域",
-            desc: "在某风场应用后，发电量提升5%-15%，油温明显下降。1.5MW机组单台每年可提升收益约7.5万元。",
-            bullets: [
-                "张北风场B23、B25、C63机组实测数据支持。",
-                "有效降低齿轮箱故障率，延长换油周期。"
-            ]
+            image: "/images/applications/application_windmills.png"
         },
         thermal: {
             title: "热电厂领域",
-            desc: "应用于空冷岛，延长齿轮箱寿命和连续运行时间，降低维护成本，节电2-10%。",
-            extra: "典型案例：大唐托克托电厂、神华上湾电厂实测运行电流下降1.9%-2.1%。"
+            image: "/images/applications/application_electricity.png"
         },
         shield: {
             title: "盾构机领域",
-            desc: "2013年应用于大直径盾构机，提升主齿轮箱能量输出效率最高达18.6%，故障率降低一半。",
-            extra: "案例：中铁隧道集团海瑞克φ9.33m土压平衡盾构机。"
+            image: "/images/applications/application_TBM.png"
         },
         auto: {
             title: "汽车领域",
-            desc: "助力恢复发动机原动力，节油3%-6%，减排30%-50%。提供“无油”状态下的极限保护。",
-            extra: "典型案例：青岛交运集团公交车试用、央视《科技之光》2010年奔驰无油行驶120公里电视直播测试。"
+            image: "/images/applications/application_cars.png",
+            video: "/videos/application_cars.m4s"
         }
     };
 
@@ -75,16 +65,57 @@ export default function Cases() {
                     </div>
 
                     <div className="reveal">
-                        <div className="bg-white p-10 rounded-lg shadow-xl border border-gray-100 min-h-[300px]">
+                        <div className="bg-white p-10 rounded-lg shadow-xl border border-gray-100 min-h-[500px]">
                             <h3 className="text-3xl font-bold text-primary-blue mb-6">
                                 {(content as any)[activeTab].title}
                             </h3>
-                            <p className="text-lg text-text-main leading-relaxed mb-6">
-                                {(content as any)[activeTab].desc}
-                            </p>
+
+                            {(content as any)[activeTab].desc && (
+                                <p className="text-lg text-text-main leading-relaxed mb-6">
+                                    {(content as any)[activeTab].desc}
+                                </p>
+                            )}
+
+                            <div className="flex flex-col gap-10 items-center">
+                                {(content as any)[activeTab].image && (
+                                    <div className="w-full flex justify-center">
+                                        <img
+                                            src={(content as any)[activeTab].image}
+                                            alt={(content as any)[activeTab].title}
+                                            className="max-w-4xl w-full h-auto rounded-lg shadow-md border border-gray-100"
+                                        />
+                                    </div>
+                                )}
+
+                                {(content as any)[activeTab].video && (
+                                    <div className="w-full flex justify-center">
+                                        <div className="max-w-4xl w-full">
+                                            <video
+                                                controls
+                                                className="w-full rounded-lg shadow-md border border-gray-100"
+                                                poster={(content as any)[activeTab].image}
+                                                preload="metadata"
+                                            >
+                                                <source src={(content as any)[activeTab].video} />
+                                                您的浏览器不支持视频播放。
+                                            </video>
+                                        </div>
+                                    </div>
+                                )}
+                            </div>
+
+                            {(content as any)[activeTab].pdf && (
+                                <div className="w-full h-[1000px] border rounded overflow-hidden mt-6">
+                                    <iframe
+                                        src={(content as any)[activeTab].pdf}
+                                        className="w-full h-full"
+                                        title={(content as any)[activeTab].title}
+                                    />
+                                </div>
+                            )}
 
                             {(content as any)[activeTab].bullets && (
-                                <ul className="list-disc pl-5 space-y-3 text-text-main">
+                                <ul className="list-disc pl-5 space-y-3 text-text-main mt-6">
                                     {(content as any)[activeTab].bullets.map((bullet: string, idx: number) => (
                                         <li key={idx}>{bullet}</li>
                                     ))}
