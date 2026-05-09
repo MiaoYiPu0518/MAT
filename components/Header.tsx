@@ -47,10 +47,12 @@ export default function Header() {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
                 </svg>
               </span>
-              <div className="absolute top-full left-0 bg-primary-blue min-w-[200px] hidden group-hover:flex flex-col shadow-lg border border-white/5 mt-2 rounded">
-                <Link href="/about/company-intro" className="px-5 py-3 border-b border-white/10 hover:bg-secondary-blue transition-colors">公司介绍</Link>
-                <Link href="/about/history" className="px-5 py-3 border-b border-white/10 hover:bg-secondary-blue transition-colors">公司历程</Link>
-                <Link href="/about/experts" className="px-5 py-3 hover:bg-secondary-blue transition-colors">专家介绍</Link>
+              <div className="absolute top-full left-0 min-w-[200px] pt-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
+                <div className="bg-primary-blue flex flex-col shadow-lg border border-white/5 rounded overflow-hidden translate-y-2 group-hover:translate-y-0 transition-transform duration-300">
+                  <Link href="/about/company-intro" className="px-5 py-3 border-b border-white/10 hover:bg-secondary-blue transition-colors text-white/90 hover:text-white">公司介绍</Link>
+                  <Link href="/about/history" className="px-5 py-3 border-b border-white/10 hover:bg-secondary-blue transition-colors text-white/90 hover:text-white">公司历程</Link>
+                  <Link href="/about/experts" className="px-5 py-3 hover:bg-secondary-blue transition-colors text-white/90 hover:text-white">专家介绍</Link>
+                </div>
               </div>
             </li>
             <li className="relative group cursor-pointer text-[15px] font-medium">
@@ -60,11 +62,13 @@ export default function Header() {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
                 </svg>
               </span>
-              <div className="absolute top-full left-0 bg-primary-blue min-w-[200px] hidden group-hover:flex flex-col shadow-lg border border-white/5 mt-2 rounded">
-                <Link href="/tech/tech-intro" className="px-5 py-3 border-b border-white/10 hover:bg-secondary-blue transition-colors">技术介绍</Link>
-                <Link href="/about/credentials" className="px-5 py-3 border-b border-white/10 hover:bg-secondary-blue transition-colors">资质荣誉</Link>
-                <Link href="/tech/reports" className="px-5 py-3 border-b border-white/10 hover:bg-secondary-blue transition-colors">运用报告</Link>
-                <Link href="/tech/papers" className="px-5 py-3 hover:bg-secondary-blue transition-colors">学术论文</Link>
+              <div className="absolute top-full left-0 min-w-[200px] pt-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
+                <div className="bg-primary-blue flex flex-col shadow-lg border border-white/5 rounded overflow-hidden translate-y-2 group-hover:translate-y-0 transition-transform duration-300">
+                  <Link href="/tech/tech-intro" className="px-5 py-3 border-b border-white/10 hover:bg-secondary-blue transition-colors text-white/90 hover:text-white">技术介绍</Link>
+                  <Link href="/about/credentials" className="px-5 py-3 border-b border-white/10 hover:bg-secondary-blue transition-colors text-white/90 hover:text-white">资质荣誉</Link>
+                  <Link href="/tech/reports" className="px-5 py-3 border-b border-white/10 hover:bg-secondary-blue transition-colors text-white/90 hover:text-white">运用报告</Link>
+                  <Link href="/tech/papers" className="px-5 py-3 hover:bg-secondary-blue transition-colors text-white/90 hover:text-white">学术论文</Link>
+                </div>
               </div>
             </li>
             <li>
