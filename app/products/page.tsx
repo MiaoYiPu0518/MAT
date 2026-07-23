@@ -58,7 +58,7 @@ export default function Products() {
                         <h2 className="text-3xl font-bold mb-10 text-primary-blue text-center">摩安科技 MAT 系列产品</h2>
 
                         <div className="overflow-x-auto shadow-xl rounded-lg border border-gray-100">
-                            <table className="w-full text-left border-collapse">
+                            <table className="w-full min-w-[680px] text-left border-collapse">
                                 <thead>
                                     <tr className="bg-primary-blue text-white">
                                         <th className="p-4 uppercase text-sm font-semibold">产品型号</th>

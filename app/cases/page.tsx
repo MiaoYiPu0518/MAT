@@ -49,12 +49,12 @@ export default function Cases() {
 
             <section className="py-20">
                 <div className="container mx-auto px-5">
-                    <div className="flex flex-wrap gap-2 border-b-2 border-gray-light mb-10 overflow-x-auto">
+                    <div className="flex flex-nowrap gap-2 border-b-2 border-gray-light mb-10 overflow-x-auto">
                         {tabs.map((tab) => (
                             <button
                                 key={tab.id}
                                 onClick={() => setActiveTab(tab.id)}
-                                className={`px-8 py-3 font-semibold transition-all whitespace-nowrap ${activeTab === tab.id
+                                className={`shrink-0 px-6 md:px-8 py-3 font-semibold transition-all whitespace-nowrap ${activeTab === tab.id
                                         ? "text-primary-blue border-b-4 border-primary-blue"
                                         : "text-text-light hover:text-primary-blue"
                                     }`}
@@ -65,8 +65,8 @@ export default function Cases() {
                     </div>
 
                     <div className="reveal">
-                        <div className="bg-white p-10 rounded-lg shadow-xl border border-gray-100 min-h-[500px]">
-                            <h3 className="text-3xl font-bold text-primary-blue mb-6">
+                        <div className="bg-white p-6 md:p-10 rounded-lg shadow-xl border border-gray-100 min-h-[500px]">
+                            <h3 className="text-2xl md:text-3xl font-bold text-primary-blue mb-6">
                                 {(content as any)[activeTab].title}
                             </h3>
 
@@ -105,7 +105,7 @@ export default function Cases() {
                             </div>
 
                             {(content as any)[activeTab].pdf && (
-                                <div className="w-full h-[1000px] border rounded overflow-hidden mt-6">
+                                <div className="w-full h-[70vh] md:h-[1000px] border rounded overflow-hidden mt-6">
                                     <iframe
                                         src={(content as any)[activeTab].pdf}
                                         className="w-full h-full"
