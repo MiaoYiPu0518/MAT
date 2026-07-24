@@ -82,6 +82,9 @@ main > :not(.home-page) article p { line-height: 1.85; }
 .footer-wechat { display: inline-flex; align-items: center; gap: 12px; margin-top: 8px; color: rgba(213,226,233,.55); }
 .footer-wechat img { width: 76px; height: 76px; padding: 4px; background: #fff; }
 .footer-wechat span { font-size: 10px; letter-spacing: .12em; }
+.news-social-link { width: 40px; height: 40px; display: inline-flex; align-items: center; justify-content: center; border: 1px solid rgba(11,27,41,.08); border-radius: 999px; color: var(--ink); background: rgba(11,27,41,.05); transition: color .25s ease, background-color .25s ease, border-color .25s ease, transform .25s ease, box-shadow .25s ease; }
+.news-social-link:hover { color: #fff; background: var(--navy); border-color: var(--navy); transform: translateY(-2px); box-shadow: 0 8px 18px rgba(7,17,28,.16); }
+.news-social-link:focus-visible { outline: 2px solid var(--cyan); outline-offset: 3px; }
 .menu-toggle, .mobile-menu { display: none; }
 
 .hero { min-height: 760px; height: 100svh; position: relative; overflow: hidden; color: #fff; background: #020711; }

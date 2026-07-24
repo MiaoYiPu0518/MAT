@@ -33,7 +33,7 @@ export default function Cases() {
         auto: {
             title: "汽车领域",
             image: "/images/applications/application_cars.png",
-            video: "/videos/application_cars.m4s"
+            video: "/videos/application_cars.mp4"
         }
     };
 

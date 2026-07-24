@@ -36,8 +36,8 @@ export default function Header() {
       </div>
       <div className={`mobile-menu ${open ? "open" : ""}`}>
         <nav aria-label="移动端导航">
-          {navItems.map((item, i) => <Link key={item.href} href={item.href}><span>0{i + 1}</span>{item.label}<b>↗</b></Link>)}
-          <Link href="/contact" className="mobile-contact-link"><span>06</span>联系我们<b>↗</b></Link>
+          {navItems.map((item, i) => <Link key={item.href} href={item.href} onClick={() => setOpen(false)}><span>0{i + 1}</span>{item.label}<b>↗</b></Link>)}
+          <Link href="/contact" className="mobile-contact-link" onClick={() => setOpen(false)}><span>06</span>联系我们<b>↗</b></Link>
         </nav>
       </div>
     </header>

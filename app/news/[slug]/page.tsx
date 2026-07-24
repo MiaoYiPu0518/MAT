@@ -136,12 +136,12 @@ export default async function NewsDetail({ params }: { params: Promise<{ slug: s
                             <div className="flex items-center gap-6">
                                 <span className="text-sm font-bold text-gray-400 uppercase tracking-widest">关注我们:</span>
                                 <div className="flex gap-4">
-                                    <div className="w-10 h-10 rounded-full bg-primary-blue/5 flex items-center justify-center hover:bg-primary-blue hover:text-white transition-all cursor-pointer">
+                                    <Link href="/contact" aria-label="联系我们" className="news-social-link">
                                         <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg>
-                                    </div>
-                                    <div className="w-10 h-10 rounded-full bg-primary-blue/5 flex items-center justify-center hover:bg-primary-blue hover:text-white transition-all cursor-pointer">
+                                    </Link>
+                                    <a href="mailto:caoqi0511@gmail.com" aria-label="发送邮件" className="news-social-link">
                                         <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 14H4V8l8 5 8-5v10zm-8-7L4 6h16l-8 5z"/></svg>
-                                    </div>
+                                    </a>
                                 </div>
                             </div>
                         </footer>

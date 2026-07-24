@@ -89,6 +89,7 @@ The approved design direction is **technical, confident, cold, and expensive**. 
 ### 5. Performance
 - **Core Web Vitals**: Focus on LCP (Largest Contentful Paint) and CLS (Cumulative Layout Shift).
 - **Static Pre-rendering**: For dynamic routes (e.g., `/app/news/[id]/page.tsx`), always implement `generateStaticParams`.
+- **Web asset optimization (required)**: Every newly added image, PDF, or video must be prepared for web delivery before it is committed. Choose an appropriate web format (WebP/AVIF for photographic images, optimized PDF for documents, and web-friendly MP4/WebM for video), preserve usable visual quality, and compress file size whenever practical. Do not add raw camera images, scans, generation outputs, or source-quality videos when a smaller equivalent can be produced. Validate dimensions, orientation, playback, page readability, and all referenced paths after optimization.
 
 ## Static Site Deployment (COS)
 > [!IMPORTANT]

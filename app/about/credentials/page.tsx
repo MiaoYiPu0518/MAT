@@ -45,7 +45,7 @@ export default function Credentials() {
             image: "/images/about/credentials/honors/honor-maritime-five-chain-2025.webp",
         },
         {
-            title: "第八届全国设备管理与技术创新成果证书（一）",
+            title: "第八届全国设备管理与技术创新成果证书",
             image: "/images/about/credentials/honors/honor-equipment-management-innovation-2026.webp",
         },
         {
