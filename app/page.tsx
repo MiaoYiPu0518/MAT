@@ -50,12 +50,12 @@ export default function Home() {
         </div>
         <div className="site-shell capability-grid">
           {capabilities.map((item) => (
-            <article className="capability-card" key={item.number}>
+            <Link href="/tech/tech-intro" className="capability-card" key={item.number} aria-label={`${item.title}，查看MAT技术介绍`}>
               <div className="capability-top"><span>{item.number}</span><small>{item.english}</small></div>
               <div className="capability-icon" aria-hidden="true"><i /><i /><i /></div>
               <h3>{item.title}</h3>
               <p>{item.desc}</p>
-            </article>
+            </Link>
           ))}
         </div>
       </section>
@@ -100,6 +100,9 @@ export default function Home() {
                 <span className="sector-arrow">↗</span>
               </Link>
             ))}
+          </div>
+          <div className="sector-actions">
+            <Link href="/products" className="button button-primary">查看产品体系 <span>↗</span></Link>
           </div>
         </div>
       </section>

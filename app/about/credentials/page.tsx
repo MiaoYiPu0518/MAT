@@ -35,6 +35,33 @@ export default function Credentials() {
         }
     ];
 
+    const honors = [
+        {
+            title: "2025“风电领跑者”风电配套产品",
+            image: "/images/about/credentials/honors/honor-wind-leader-2025.webp",
+        },
+        {
+            title: "2025世界航海装备大会“五链融合”推进活动荣誉证书",
+            image: "/images/about/credentials/honors/honor-maritime-five-chain-2025.webp",
+        },
+        {
+            title: "第八届全国设备管理与技术创新成果证书（一）",
+            image: "/images/about/credentials/honors/honor-equipment-management-innovation-2026.webp",
+        },
+        {
+            title: "第五届人工自愈与装备自主健康学术论坛论文录用",
+            image: "/images/about/credentials/honors/honor-paper-inclusion-2025.webp",
+        },
+        {
+            title: "第七届全国设备管理与技术创新成果证书",
+            image: "/images/about/credentials/honors/honor-equipment-management-innovation-2025.webp",
+        },
+        {
+            title: "2026“北极星杯”风电影响力·技改提升优秀案例",
+            image: "/images/about/credentials/honors/honor-north-star-cup-2026.webp",
+        },
+    ];
+
     const documents = [
         {
             title: "2024摩安科技 - 产品企业标准",
@@ -122,7 +149,37 @@ export default function Credentials() {
                             </div>
                         </div>
 
-                        {/* Section 2: Documents & Standards */}
+                        {/* Section 2: Honors */}
+                        <div>
+                            <div className="mb-10">
+                                <h2 className="text-3xl font-bold text-primary-blue mb-4 border-l-4 border-accent-blue pl-4">荣誉资质</h2>
+                                <p className="text-text-light">MAT技术在风电、航海装备及设备管理领域的应用成果与行业认可。</p>
+                            </div>
+
+                            <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-6">
+                                {honors.map((item, idx) => (
+                                    <div key={idx} className="group bg-white rounded-xl overflow-hidden shadow-sm border border-gray-100 hover:shadow-xl transition-all duration-300">
+                                        <a
+                                            href={item.image}
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            className="aspect-[4/3] overflow-hidden bg-gray-50 flex items-center justify-center p-4 cursor-zoom-in"
+                                        >
+                                            <img
+                                                src={item.image}
+                                                alt={item.title}
+                                                className="w-full h-full object-contain transform group-hover:scale-105 transition-transform duration-500"
+                                            />
+                                        </a>
+                                        <div className="p-4 bg-gray-50/50 border-t border-gray-100 text-center">
+                                            <p className="text-sm font-semibold text-primary-blue">{item.title}</p>
+                                        </div>
+                                    </div>
+                                ))}
+                            </div>
+                        </div>
+
+                        {/* Section 3: Documents & Standards */}
                         <div>
                             <div className="mb-10">
                                 <h2 className="text-3xl font-bold text-primary-blue mb-4 border-l-4 border-accent-blue pl-4">推广文件及产品标准</h2>
