@@ -5,8 +5,66 @@ import "./globals.css";
 import Header from "@/components/Header";
 
 export const metadata: Metadata = {
-  title: "MAT摩安科技 | 金属表面自生强化技术",
-  description: "以微纳米摩擦学技术，为高价值工业装备提供不停机、可持续的磨损自愈与摩擦治理解决方案。",
+  title: {
+    default: "MAT摩安科技 | 金属表面自修饰与自生强化技术 - 北京摩安迈特技术有限公司",
+    template: "%s | MAT摩安科技",
+  },
+  description: "北京摩安迈特技术有限公司（MAT）专注于工业装备微纳米摩擦学技术，提供不停机、可持续的金属磨损自愈与摩擦治理解决方案。",
+  keywords: [
+    "MAT",
+    "MAT摩安",
+    "摩安",
+    "摩安科技",
+    "摩安迈特",
+    "摩安迈特技术",
+    "北京摩安迈特技术有限公司",
+    "MATтехнология",
+    "金属表面自生强化",
+    "在线摩擦治理",
+    "磨损自愈",
+    "摩擦学工程",
+    "风电齿轮箱修复",
+    "轨交摩擦治理"
+  ],
+  authors: [{ name: "北京摩安迈特技术有限公司" }],
+  publisher: "北京摩安迈特技术有限公司",
+  openGraph: {
+    title: "MAT摩安科技 | 金属表面自修饰与自生强化技术",
+    description: "北京摩安迈特技术有限公司（MAT）专注于工业装备微纳米摩擦学技术，提供不停机、可持续的金属磨损自愈与摩擦治理解决方案。",
+    siteName: "MAT摩安科技",
+    locale: "zh_CN",
+    type: "website",
+  },
+};
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "#organization",
+      "name": "北京摩安迈特技术有限公司",
+      "alternateName": ["MAT", "MAT摩安科技", "摩安迈特", "MAT Technology"],
+      "url": "https://www.matechnology.cn",
+      "logo": "https://www.matechnology.cn/images/MAT_logo.png",
+      "description": "以微纳米摩擦学技术，为高价值工业装备提供不停机、可持续的磨损自愈与摩擦治理解决方案。",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "北京市",
+        "addressRegion": "北京市",
+        "streetAddress": "丰台区外环南路甲1号 A座 3-701"
+      },
+      "telephone": "+86 136 0409 8408"
+    },
+    {
+      "@type": "WebSite",
+      "@id": "#website",
+      "name": "MAT摩安科技",
+      "alternateName": "MAT",
+      "url": "https://www.matechnology.cn",
+      "publisher": { "@id": "#organization" }
+    }
+  ]
 };
 
 export default function RootLayout({
@@ -16,6 +74,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="zh-CN">
+      <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
+      </head>
       <body>
         <Header />
         <main>{children}</main>
