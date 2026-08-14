@@ -1,4 +1,10 @@
 import Link from "next/link";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+    title: "企业新闻与最新动态",
+    description: "追踪摩安科技最新动态，展会报道与媒体资讯，见证中国风电与摩擦治理技术的突破进展。",
+};
 
 export default function NewsPage() {
     const newsList = [

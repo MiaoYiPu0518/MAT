@@ -1,3 +1,10 @@
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+    title: "产品体系与规格",
+    description: "摩安科技MAT系列产品目录：主齿轮箱、偏航与变桨减速器、主轴轴承及开放齿轮专用自修复与润滑强化产品。",
+};
+
 export default function Products() {
     const products = [
         {

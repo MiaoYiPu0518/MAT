@@ -1,4 +1,10 @@
 import Link from "next/link";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+    title: "公司介绍",
+    description: "北京摩安迈特技术有限公司（原北京天捷优越科技有限公司）致力于金属表面自生强化增材制造技术（MAT技术）研发与工业装备摩擦治理。",
+};
 
 export default function CompanyIntro() {
     const sidebarLinks = [

@@ -1,4 +1,10 @@
 import Link from "next/link";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+    title: "学术论文与核心成果",
+    description: "MAT技术在《材料工程》、《材料科学与工艺》、《中国铁道科学》等国家级核心期刊发表的权威学术论文成果。",
+};
 
 export default function AcademicPapers() {
     const sidebarLinks = [

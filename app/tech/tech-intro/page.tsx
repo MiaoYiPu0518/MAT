@@ -1,4 +1,10 @@
 import Link from "next/link";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+    title: "核心技术与机理",
+    description: "MAT金属表面自生强化技术：在线动态抛光 + 固液复合润滑 + 原位改性强化 + 自适应增材修复，实现摩擦能自愈强化。",
+};
 
 export default function TechIntro() {
     const sidebarLinks = [

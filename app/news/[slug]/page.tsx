@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
+import type { Metadata } from "next";
 
 const newsData: Record<string, any> = {
     "cwp2025": {
@@ -42,6 +43,21 @@ const newsData: Record<string, any> = {
         ]
     }
 };
+
+export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
+    const { slug } = await params;
+    const news = newsData[slug];
+    if (!news) return { title: "新闻详情" };
+    return {
+        title: news.title,
+        description: news.content?.find((c: any) => c.type === "p")?.text?.slice(0, 150) || news.title,
+        openGraph: {
+            title: news.title,
+            description: news.content?.find((c: any) => c.type === "p")?.text?.slice(0, 150) || news.title,
+            images: news.banner ? [news.banner] : [],
+        },
+    };
+}
 
 export async function generateStaticParams() {
     return Object.keys(newsData).map((slug) => ({

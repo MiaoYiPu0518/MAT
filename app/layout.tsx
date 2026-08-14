@@ -5,6 +5,7 @@ import "./globals.css";
 import Header from "@/components/Header";
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://www.matechnology.cn"),
   title: {
     default: "MAT摩安科技 | 金属表面自修饰与自生强化技术 - 北京摩安迈特技术有限公司",
     template: "%s | MAT摩安科技",

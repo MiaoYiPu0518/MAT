@@ -1,4 +1,10 @@
 import Link from "next/link";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+    title: "专家团队与顾问",
+    description: "两代科学家跨领域整合，由徐滨士院士、杨其明专家、白志民教授、曹琦董事长等领衔的摩擦学顶尖研发团队。",
+};
 
 export default function Experts() {
     const sidebarLinks = [

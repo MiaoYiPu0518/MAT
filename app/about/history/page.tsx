@@ -1,4 +1,10 @@
 import Link from "next/link";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+    title: "发展历程与里程碑",
+    description: "从2003年起航至今，摩安科技在技术研发、工业化应用、风电进军与理论模型突破的里程碑发展历程。",
+};
 
 export default function History() {
     const sidebarLinks = [

@@ -105,12 +105,41 @@ export default function Cases() {
                             </div>
 
                             {(content as any)[activeTab].pdf && (
-                                <div className="w-full h-[70vh] md:h-[1000px] border rounded overflow-hidden mt-6">
-                                    <iframe
-                                        src={(content as any)[activeTab].pdf}
-                                        className="w-full h-full"
-                                        title={(content as any)[activeTab].title}
-                                    />
+                                <div className="w-full mt-6 space-y-3">
+                                    <div className="flex flex-wrap items-center justify-between gap-3 bg-gray-50 p-4 rounded-lg border border-gray-200">
+                                        <div className="flex items-center gap-2 text-primary-blue font-semibold text-sm">
+                                            <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-accent-blue" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                                            </svg>
+                                            <span>在线技术应用报告（PDF 格式）</span>
+                                        </div>
+                                        <div className="flex items-center gap-3">
+                                            <a
+                                                href={(content as any)[activeTab].pdf}
+                                                target="_blank"
+                                                rel="noopener noreferrer"
+                                                className="inline-flex items-center gap-1.5 px-4 py-2 bg-primary-blue text-white rounded-md text-xs font-bold hover:bg-opacity-90 transition-all shadow-sm"
+                                            >
+                                                <span>在新窗口全屏浏览</span>
+                                                <b>↗</b>
+                                            </a>
+                                            <a
+                                                href={(content as any)[activeTab].pdf}
+                                                download
+                                                className="inline-flex items-center gap-1.5 px-4 py-2 bg-white text-primary-blue border border-gray-300 rounded-md text-xs font-bold hover:bg-gray-50 transition-all"
+                                            >
+                                                <span>下载报告</span>
+                                                <b>↓</b>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div className="w-full h-[70vh] md:h-[1000px] border border-gray-200 rounded-lg overflow-hidden shadow-inner bg-gray-100">
+                                        <iframe
+                                            src={(content as any)[activeTab].pdf}
+                                            className="w-full h-full"
+                                            title={(content as any)[activeTab].title}
+                                        />
+                                    </div>
                                 </div>
                             )}
 

@@ -60,6 +60,7 @@ main > div:not(.home-page) > section:not(:first-child) { background-color: #f7f9
 main > :not(.home-page) aside > div { border-radius: 0; border: 1px solid #d9e1e6; background: #edf1f3; }
 main > :not(.home-page) aside h3 { letter-spacing: -.02em; }
 main > :not(.home-page) article { min-width: 0; }
+
 main > :not(.home-page) article p { line-height: 1.85; }
 
 .site-header { position: fixed; inset: 0 0 auto; height: 82px; z-index: 50; color: #fff; background: linear-gradient(180deg, rgba(3,9,18,.92), rgba(3,9,18,.46)); border-bottom: 1px solid rgba(255,255,255,.13); backdrop-filter: blur(16px); }
@@ -75,7 +76,7 @@ main > :not(.home-page) article p { line-height: 1.85; }
 .header-tools > span { font-size: 12px; font-weight: 700; letter-spacing: .12em; }
 .header-tools > i { width: 1px; height: 16px; background: rgba(255,255,255,.3); }
 .header-contact { display: flex; align-items: center; gap: 26px; padding: 11px 16px; border: 1px solid rgba(255,255,255,.3); font-size: 13px; transition: .25s; }
-.header-contact:hover { background: #fff; color: var(--navy); }
+.header-contact:hover, .header-contact.active { background: #fff; color: var(--navy); }
 .header-contact b { font-size: 16px; }
 .footer-contact-title { display: inline-flex; }
 .footer-contact-title:hover strong { color: var(--cyan); }

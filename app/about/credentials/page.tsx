@@ -1,4 +1,10 @@
 import Link from "next/link";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+    title: "资质荣誉与科技成果",
+    description: "MAT技术科技成果鉴定证书、发明与实用新型专利、国家重点节能技术推广目录及各行业权威资质荣誉。",
+};
 
 export default function Credentials() {
     const sidebarLinks = [

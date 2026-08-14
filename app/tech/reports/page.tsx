@@ -1,4 +1,10 @@
 import Link from "next/link";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+    title: "实车运用与实验报告",
+    description: "大唐托克托电厂、大板机务段、神华齿轮、怀化机务段等MAT技术实车运用与第三方权威检测实验报告。",
+};
 
 export default function ApplicationReports() {
     const sidebarLinks = [
