@@ -45,7 +45,7 @@ export default function CompanyIntro() {
                         <h2 className="text-3xl font-bold mb-6 text-primary-blue">北京摩安迈特技术有限公司</h2>
                         <div className="prose max-w-none text-text-main space-y-4">
                             <p>
-                                北京摩安迈特技术有限公司（Beijing Moan Maite Technology Co., Ltd.，原北京天界卓尔技术有限公司）是一家专业从事“金属表面自生强化增材制造技术（MAT技术）”研发、生产及服务的生产服务型高新技术企业。
+                                北京摩安迈特技术有限公司（Beijing Moan Maite Technology Co., Ltd.，原北京天捷优越科技有限公司）是一家专业从事“金属表面自生强化增材制造技术（MAT技术）”研发、生产及服务的生产服务型高新技术企业。
                             </p>
 
                             <p>

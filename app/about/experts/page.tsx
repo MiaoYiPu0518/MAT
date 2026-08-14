@@ -18,7 +18,7 @@ export default function Experts() {
         {
             name: "杨其明",
             titles: ["摩擦学专家 教授高级工程师", "03院士候选人 国家津贴专家", "检测技术专家"],
-            desc: "国家级突出贡献专家，享受国务院政府特殊津贴.长期从事摩擦学、表面工程及油液分析技术研究。",
+            desc: "国家级突出贡献专家，享受国务院政府特殊津贴，长期从事摩擦学、表面工程及油液分析技术研究。",
             image: "/images/about/experts/expert-yangqiming.png"
         },
         {
@@ -47,8 +47,8 @@ export default function Experts() {
         },
         {
             name: "杨超",
-            titles: ["热能动力专家", "原北京交大机电工程学院院院长", "著名的铁路热能动力专家"],
-            desc: "在机车动力系统、节能降耗及铁路装备摩擦治理论领域拥有权威地位。",
+            titles: ["热能动力专家", "原北京交大机电工程学院院长", "著名的铁路热能动力专家"],
+            desc: "在机车动力系统、节能降耗及铁路装备摩擦治理领域拥有权威地位。",
             image: "/images/about/experts/expert-yangchao.png"
         },
         {
@@ -96,7 +96,7 @@ export default function Experts() {
                         <div className="mb-16">
                             <h2 className="text-4xl font-bold text-primary-blue mb-4">专家贡献</h2>
                             <p className="text-lg text-text-main leading-relaxed max-w-4xl italic border-l-4 border-accent-blue pl-6">
-                                一群人的努力，两代科学家跨领域、多学科资源整合，十年磨一剑，成就了摩安科技如今拥有自主知识产权的MAT技术。摩安科技决心继承老一代科学家的勇敢创新精神、与用户企业的工程技术人员合作，把金属表面减摩自修复金属推向更广泛的领域。
+                                一群人的努力，两代科学家跨领域、多学科资源整合，十年磨一剑，成就了摩安科技如今拥有自主知识产权的MAT技术。摩安科技决心继承老一代科学家的勇敢创新精神、与用户企业的工程技术人员合作，把金属表面减摩自修复技术推向更广泛的领域。
                             </p>
                         </div>
 

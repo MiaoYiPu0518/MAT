@@ -64,7 +64,7 @@ export default function TechIntro() {
 
                                 <div>
                                     <h3 className="text-2xl font-bold text-secondary-blue mb-4">实现“动态平衡”</h3>
-                                    <p>通过在线动态抛光、自适应增适应增材过程，优化配合间隙，改善摩擦副匹配，实现运动副表面磨损和增材补偿的动态平衡。</p>
+                                    <p>通过在线动态抛光、自适应增材过程，优化配合间隙，改善摩擦副匹配，实现运动副表面磨损和增材补偿的动态平衡。</p>
                                 </div>
                             </div>
 
