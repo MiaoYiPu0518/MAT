@@ -118,7 +118,7 @@ export default function Cases() {
                                                 href={(content as any)[activeTab].pdf}
                                                 target="_blank"
                                                 rel="noopener noreferrer"
-                                                className="inline-flex items-center gap-1.5 px-4 py-2 bg-primary-blue text-white rounded-md text-xs font-bold hover:bg-opacity-90 transition-all shadow-sm"
+                                                className="pdf-btn-primary"
                                             >
                                                 <span>在新窗口全屏浏览</span>
                                                 <b>↗</b>
@@ -126,7 +126,7 @@ export default function Cases() {
                                             <a
                                                 href={(content as any)[activeTab].pdf}
                                                 download
-                                                className="inline-flex items-center gap-1.5 px-4 py-2 bg-white text-primary-blue border border-gray-300 rounded-md text-xs font-bold hover:bg-gray-50 transition-all"
+                                                className="pdf-btn-secondary"
                                             >
                                                 <span>下载报告</span>
                                                 <b>↓</b>

@@ -88,6 +88,48 @@ main > :not(.home-page) article p { line-height: 1.85; }
 .news-social-link:focus-visible { outline: 2px solid var(--cyan); outline-offset: 3px; }
 .menu-toggle, .mobile-menu { display: none; }
 
+.pdf-btn-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 16px;
+  background-color: #17425f;
+  color: #ffffff !important;
+  font-size: 12px;
+  font-weight: 700;
+  border-radius: 6px;
+  box-shadow: 0 2px 6px rgba(15, 38, 59, 0.2);
+  transition: all 0.2s ease;
+  text-decoration: none;
+}
+.pdf-btn-primary:hover {
+  background-color: #235c82;
+  color: #ffffff !important;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 10px rgba(15, 38, 59, 0.28);
+}
+.pdf-btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 16px;
+  background-color: #ffffff;
+  color: #17425f !important;
+  font-size: 12px;
+  font-weight: 700;
+  border-radius: 6px;
+  border: 1px solid #cbd5e1;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+  transition: all 0.2s ease;
+  text-decoration: none;
+}
+.pdf-btn-secondary:hover {
+  background-color: #f8fafc;
+  border-color: #94a3b8;
+  color: #0f2c42 !important;
+  transform: translateY(-1px);
+}
+
 .hero { min-height: 760px; height: 100svh; position: relative; overflow: hidden; color: #fff; background: #020711; }
 .hero-image { object-fit: cover; object-position: 61% center; opacity: .88; animation: heroReveal 1.5s cubic-bezier(.2,.8,.2,1) both; }
 .hero::before { content: ""; position: absolute; inset: 0; z-index: 1; background: linear-gradient(90deg, rgba(2,7,17,.97) 0%, rgba(4,12,25,.79) 37%, rgba(2,8,18,.12) 72%), linear-gradient(0deg, rgba(2,7,15,.72), transparent 42%); }
