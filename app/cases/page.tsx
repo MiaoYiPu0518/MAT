@@ -65,7 +65,7 @@ export default function Cases() {
                     </div>
 
                     <div className="reveal">
-                        <div className="bg-white p-6 md:p-10 rounded-lg shadow-xl border border-gray-100 min-h-[500px]">
+                        <div key={activeTab} className="tab-pane-content bg-white p-6 md:p-10 rounded-lg shadow-xl border border-gray-100 min-h-[500px]">
                             <h3 className="text-2xl md:text-3xl font-bold text-primary-blue mb-6">
                                 {(content as any)[activeTab].title}
                             </h3>

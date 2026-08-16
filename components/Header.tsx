@@ -48,7 +48,7 @@ export default function Header() {
           >
             联系我们 <b>↗</b>
           </Link>
-          <button className="menu-toggle" onClick={() => setOpen(!open)} aria-label={open ? "关闭菜单" : "打开菜单"} aria-expanded={open}>
+          <button className={`menu-toggle ${open ? "open" : ""}`} onClick={() => setOpen(!open)} aria-label={open ? "关闭菜单" : "打开菜单"} aria-expanded={open}>
             <span /><span />
           </button>
         </div>
