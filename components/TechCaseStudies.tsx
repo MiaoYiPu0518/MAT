@@ -9,7 +9,7 @@ const cases = [
       "T001机组于2025年9月添加MAT。初期齿面变化尚不明显，至2026年3月，内窥镜观察到修复层逐步覆盖、表面形貌改善；高频振动能量由介入前的0.6–0.7 m/s²，降至2026年1月后的≤0.1 m/s²。",
       "低速高载荷滑动轴承台架在180小时修复运行后，轴表面多数划痕与凹坑消失，同位轴径增加20–40 μm，大块剥落仍存在。主轴轴承台架在15 rpm下连续运行20天，也观察到划痕与凹坑的填充现象。",
     ],
-    metrics: [{ label: "T001机组高频振动能量", value: "0.6–0.7 → ≤0.1", unit: "m/s²" }],
+    metrics: [{ label: "T001机组高频振动能量", before: "0.6–0.7", value: "≤0.1", unit: "m/s²" }],
     images: [
       { src: "gear-before-2026.webp", width: 960, height: 720, alt: "T001风电机组三级行星轮治理前的齿面内窥镜图像", label: "治理前" },
       { src: "gear-after-2026.webp", width: 581, height: 436, alt: "T001风电机组三级行星轮治理后的齿面内窥镜图像", label: "治理后" },
@@ -97,6 +97,21 @@ const cases = [
   },
 ];
 
+function CaseMetric({ label, value, unit, before }: { label: string; value: string; unit: string; before?: string }) {
+  return (
+    <div className={styles.metricPanel}>
+      <dt>{label}</dt>
+      {before ? <dd className={styles.metricComparison}>
+        <span className={styles.metricBaseline}><span className={styles.metricPhase}>介入前</span><strong>{before}</strong><small>{unit}</small></span>
+        <span className={styles.metricArrow} aria-hidden="true">→</span>
+        <span className={styles.metricOutcome}><span className={styles.metricPhase}>2026年1月后</span><strong>{value}</strong><small>{unit}</small></span>
+      </dd> : <dd className={styles.metricResult}>
+        <strong className={value.includes("/") ? styles.metricCompact : undefined}>{value}</strong><small>{unit}</small>
+      </dd>}
+    </div>
+  );
+}
+
 export default function TechCaseStudies() {
   return (
     <div className={styles.caseStudies}>
@@ -105,10 +120,10 @@ export default function TechCaseStudies() {
           <div className={styles.featureCopy}>
             <p className={styles.eyebrow}>{item.category}</p>
             <h3>{item.title}</h3>
-            {item.paragraphs.map((paragraph) => <p key={paragraph}>{paragraph}</p>)}
             {item.metrics.length > 0 && <dl className={styles.featureMetrics}>
-              {item.metrics.map((metric) => <div key={metric.label}><dt>{metric.label}</dt><dd>{metric.value} <small>{metric.unit}</small></dd></div>)}
+              {item.metrics.map((metric) => <CaseMetric key={metric.label} {...metric} />)}
             </dl>}
+            {item.paragraphs.map((paragraph) => <p key={paragraph}>{paragraph}</p>)}
           </div>
           <figure className={styles.caseFigure}>
             <div className={`${styles.caseImages} ${item.images.length > 1 ? styles.pairedImages : ""}`}>

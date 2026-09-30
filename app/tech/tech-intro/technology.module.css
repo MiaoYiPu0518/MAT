@@ -75,10 +75,20 @@
 .featureCopy .eyebrow { margin-bottom: 20px; }
 .featureCopy h3 { margin: 0 0 23px; font-size: 27px; line-height: 1.5; letter-spacing: -.035em; font-weight: 500; }
 .featureCopy > p:not(.eyebrow) { font-size: 13px; line-height: 1.95; color: #435967; margin: 0 0 17px; }
-.featureMetrics { border-top: 1px solid #ccd6dd; padding-top: 21px; margin: 27px 0 0; }
-.featureMetrics dt { font-size: 11px; color: #506675; margin-bottom: 8px; }
-.featureMetrics dd { margin: 0; font: 26px/1.5 Consolas,monospace; color: #172f40; }
-.featureMetrics small { font-size: 11px; white-space: nowrap; }
+.featureMetrics { display: grid; gap: 16px; margin: 0 0 28px; }
+.metricPanel { container-type: inline-size; min-width: 0; padding: 25px 28px; background: #0b1b29; border: 1px solid #344f61; border-left: 3px solid #9bc6df; color: #eef2f4; }
+.metricPanel dt { font-size: 13px; font-weight: 500; color: #d8e3e9; line-height: 1.75; margin-bottom: 21px; }
+.metricPanel dd { margin: 0; }
+.metricPanel strong { display: block; font: 600 clamp(36px,11cqi,56px)/1.1 Consolas,"SFMono-Regular",monospace; letter-spacing: -.055em; font-variant-numeric: tabular-nums; }
+.metricPanel small { color: #b9d0dd; font-size: 13px; line-height: 1.6; }
+.metricComparison { display: grid; grid-template-columns: minmax(0,1fr) 20px minmax(0,1fr); align-items: center; gap: 14px; }
+.metricBaseline, .metricOutcome { display: grid; min-width: 0; gap: 9px; }
+.metricPhase { color: #a9bfcd; font-size: 11px; line-height: 1.7; }
+.metricBaseline strong { color: #a9bfcd; font-size: clamp(24px,7cqi,34px); font-weight: 400; }
+.metricOutcome strong { color: #fff; }
+.metricArrow { color: #9bc6df; font: 25px/1 Consolas,monospace; }
+.metricResult { display: flex; flex-wrap: wrap; gap: 12px 16px; align-items: baseline; }
+.metricPanel .metricCompact { font-size: clamp(28px,8cqi,42px); }
 .caseFigure { margin: 0; min-width: 0; }
 .caseImages { display: grid; gap: 14px; }
 .pairedImages { grid-template-columns: repeat(2,minmax(0,1fr)); align-items: start; }
@@ -151,7 +161,8 @@
   .caseStudies { margin-top: 40px; }
   .featureCase { grid-template-columns: 1fr; padding: 40px 0; gap: 28px; }
   .featureCopy h3 { font-size: 25px; }
-  .featureMetrics dd { font-size: 24px; }
+  .metricPanel { padding: 23px 20px; }
+  .metricComparison { gap: 10px; }
   .resourceGrid { gap: 40px; }
   .documentCard { padding: 25px; }
   .documentCard h3 { font-size: 21px; }
