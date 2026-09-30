@@ -2,21 +2,23 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { usePathname } from "next/navigation";
 
 const navItems = [
   { label: "关于MAT", href: "/about/company-intro" },
-  { label: "核心技术", href: "/tech/tech-intro" },
+  { label: "技术介绍", href: "/tech/tech-intro" },
   { label: "产品体系", href: "/products" },
-  { label: "行业应用", href: "/cases" },
   { label: "新闻中心", href: "/news" },
 ];
 
 export default function Header() {
-  const [open, setOpen] = useState(false);
   const pathname = usePathname();
-  useEffect(() => setOpen(false), [pathname]);
+  return <HeaderNavigation key={pathname} pathname={pathname} />;
+}
+
+function HeaderNavigation({ pathname }: { pathname: string }) {
+  const [open, setOpen] = useState(false);
 
   const isItemActive = (href: string) => {
     if (href === "/") return pathname === "/";
@@ -48,7 +50,7 @@ export default function Header() {
           >
             联系我们 <b>↗</b>
           </Link>
-          <button className={`menu-toggle ${open ? "open" : ""}`} onClick={() => setOpen(!open)} aria-label={open ? "关闭菜单" : "打开菜单"} aria-expanded={open}>
+          <button className="menu-toggle" onClick={() => setOpen(!open)} aria-label={open ? "关闭菜单" : "打开菜单"} aria-expanded={open}>
             <span /><span />
           </button>
         </div>
@@ -70,7 +72,7 @@ export default function Header() {
             className={`mobile-contact-link ${pathname.startsWith("/contact") ? "active" : ""}`}
             onClick={() => setOpen(false)}
           >
-            <span>06</span>联系我们<b>↗</b>
+            <span>{String(navItems.length + 1).padStart(2, "0")}</span>联系我们<b>↗</b>
           </Link>
         </nav>
       </div>

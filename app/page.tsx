@@ -8,10 +8,10 @@ const capabilities = [
 ];
 
 const sectors = [
-  { title: "风力发电", tag: "WIND ENERGY", image: "/images/home/sector-wind-v2.webp", desc: "齿轮箱 · 主轴轴承 · 发电机轴承" },
-  { title: "轨道交通", tag: "RAIL TRANSIT", image: "/images/home/sector-rail-v2.webp", desc: "柴油机 · 传动系统 · 轮轨系统" },
-  { title: "工业传动", tag: "INDUSTRIAL DRIVE", image: "/images/home/sector-industrial-v2.webp", desc: "重载齿轮 · 减速器 · 关键摩擦副" },
-  { title: "汽车动力", tag: "AUTOMOTIVE", image: "/images/home/sector-automotive-v2.webp", desc: "发动机 · 变速箱 · 差速器" },
+  { title: "风力发电", tag: "WIND ENERGY", image: "/images/home/sector-wind-v2.webp", desc: "齿轮箱 · 主轴轴承 · 发电机轴承", href: "/tech/tech-intro#case-wind" },
+  { title: "轨道交通", tag: "RAIL TRANSIT", image: "/images/home/sector-rail-v2.webp", desc: "柴油机 · 传动系统 · 轮轨系统", href: "/tech/tech-intro#case-railway" },
+  { title: "工业传动", tag: "INDUSTRIAL DRIVE", image: "/images/home/sector-industrial-v2.webp", desc: "重载齿轮 · 减速器 · 关键摩擦副", href: "/tech/tech-intro#case-machine" },
+  { title: "汽车动力", tag: "AUTOMOTIVE", image: "/images/home/sector-automotive-v2.webp", desc: "发动机 · 变速箱 · 差速器", href: "/tech/tech-intro#case-automotive" },
 ];
 
 export default function Home() {
@@ -27,7 +27,7 @@ export default function Home() {
           <p className="hero-lead">以微纳米材料与摩擦化学为基础，在设备运行工况中原位重构金属表面。无需停机，无需拆解。</p>
           <div className="hero-actions">
             <Link href="/tech/tech-intro" className="button button-primary">探索核心技术 <span>↗</span></Link>
-            <Link href="/cases" className="button button-ghost">查看应用案例 <span>→</span></Link>
+            <Link href="/tech/tech-intro#applications" className="button button-ghost">查看应用案例 <span>→</span></Link>
           </div>
         </div>
         <div className="hero-reference" aria-hidden="true"><span>39.9042° N</span><span>116.4074° E</span><span>SYS / ACTIVE</span></div>
@@ -92,7 +92,7 @@ export default function Home() {
           </div>
           <div className="sector-grid">
             {sectors.map((sector, index) => (
-              <Link href="/cases" className="sector-card" key={sector.title}>
+              <Link href={sector.href} className="sector-card" key={sector.title}>
                 <Image src={sector.image} alt={sector.title} fill sizes="(max-width: 800px) 100vw, 33vw" />
                 <div className="sector-overlay" />
                 <span className="sector-index">0{index + 1}</span>

@@ -1,5 +1,4 @@
 import Link from "next/link";
-import Image from "next/image";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -29,12 +28,9 @@ export default function NewsPage() {
         <div>
             {/* News Banner */}
             <section className="relative h-[400px] flex items-center justify-center overflow-hidden">
-                <Image 
+                <img
                     src="/images/news/news-banner.png" 
                     alt="News Banner" 
-                    fill
-                    priority
-                    sizes="100vw"
                     className="absolute inset-0 w-full h-full object-cover"
                 />
                 <div className="absolute inset-0 bg-black/40"></div>
@@ -66,17 +62,15 @@ export default function NewsPage() {
                                 className="group bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-2xl transition-all duration-500 border border-gray-100 flex flex-col h-full"
                             >
                                 <div className="relative h-72 overflow-hidden">
-                                    <Image 
+                                    <img
                                         src={news.image} 
                                         alt={news.title}
-                                        fill
-                                        sizes="(max-width: 768px) 100vw, 50vw"
-                                        className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500"
+                                        className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700"
                                     />
-                                    <div className="absolute top-6 left-6 z-10 bg-white/90 backdrop-blur-sm px-4 py-2 rounded-full shadow-lg">
+                                    <div className="absolute top-6 left-6 bg-white/90 backdrop-blur-sm px-4 py-2 rounded-full shadow-lg">
                                         <span className="text-accent-blue font-bold text-xs tracking-widest uppercase">{news.date}</span>
                                     </div>
-                                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-10"></div>
+                                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                                 </div>
                                 
                                 <div className="p-10 flex-1 flex flex-col">
