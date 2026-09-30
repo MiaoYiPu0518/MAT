@@ -29,6 +29,12 @@
 .heading span { color: #708491; font-weight: 400; }
 .overviewGrid { display: grid; grid-template-columns: 1fr 1.2fr; gap: 80px; }
 .bodyCopy p { font-size: 15px; line-height: 1.95; margin: 0 0 22px; color: #435967; }
+.overviewVisual { margin: 36px 0 0; min-width: 0; }
+.surfaceImages { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 12px; }
+.surfaceImages > div { min-width: 0; border: 1px solid #c6d2db; background: #0b1b29; }
+.surfaceImages img { display: block; width: 100%; height: auto; }
+.surfaceImages span { display: block; padding: 11px 13px; color: #d8e3e9; font-size: 11px; }
+.overviewVisual figcaption { color: #506675; font-size: 11px; line-height: 1.85; margin-top: 13px; }
 .principles { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); margin-top: 56px; border-block: 1px solid #ccd6dd; }
 .principles div { padding: 24px 25px; border-right: 1px solid #ccd6dd; }
 .principles div:first-child { padding-left: 0; }.principles div:last-child { border-right: 0; }
@@ -39,11 +45,22 @@
 .sectionHeading > p { margin: 0 0 5px; color: #5c6f7d; font-size: 14px; line-height: 1.95; }.darkSection .sectionHeading > p { color: #a7b7c2; }
 .mechanismFlow { display: grid; grid-template-columns: minmax(0,1fr) 40px minmax(0,1fr) 40px minmax(0,1fr); gap: 20px; border-block: 1px solid #394c5a; padding: 35px 0; align-items: center; }
 .mechanismFlow span { display: block; color: #91a5b4; font-size: 11px; margin-bottom: 12px; }.mechanismFlow strong { font-size: 17px; font-weight: 500; }.mechanismFlow p { font-size: 12px; color: #91a5b4; margin: 10px 0 0; }.mechanismFlow > b { color: #789aaf; font-size: 25px; font-weight: 400; }
+.mechanismVisuals { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 30px; margin-top: 38px; }
+.mechanismVisuals figure { margin: 0; min-width: 0; }
+.mechanismVisuals img { display: block; width: 100%; height: auto; aspect-ratio: 770 / 497; object-fit: contain; background: #f7f9fa; border: 1px solid #4a6171; }
+.mechanismVisuals figcaption { padding-top: 18px; }
+.mechanismVisuals figcaption strong, .engineeringVisual figcaption strong { display: block; font-size: 14px; font-weight: 500; line-height: 1.7; }
+.mechanismVisuals figcaption span { display: block; color: #b9cbd6; font-size: 12px; line-height: 1.85; margin-top: 7px; }
 .mechanismGrid { display: grid; grid-template-columns: repeat(4,minmax(0,1fr)); margin-top: 52px; }
 .mechanismGrid > div { padding: 0 25px; border-right: 1px solid #394c5a; }.mechanismGrid > div:first-child { padding-left: 0; }.mechanismGrid > div:last-child { padding-right: 0; border-right: 0; }
 .number { font: 11px/1.6 Consolas, monospace; color: #426f8d; }.darkSection .number { color: #8eb7ce; }
 .mechanismGrid h3 { margin: 22px 0 8px; font-size: 20px; font-weight: 500; }.mechanismGrid small { font: 9px/1.6 Consolas, monospace; color: #a9c2d2; letter-spacing: .07em; }.mechanismGrid p { margin: 18px 0 0; font-size: 13px; line-height: 1.95; color: #a2b3bf; }
 .technicalNote { border: 1px solid #394c5a; padding: 28px 32px; margin-top: 50px; }.technicalNote strong { font-size: 13px; font-weight: 500; }.technicalNote p { margin: 12px 0 16px; font-size: 13px; color: #a2b3bf; line-height: 1.95; }.technicalNote a { font-size: 11px; color: #9bc6df; border-bottom: 1px solid #4d6a7d; }
+.engineeringVisual { margin: 0 0 42px; min-width: 0; }
+.engineeringVisual > div { background: #1c2124; border: 1px solid #344550; }
+.engineeringVisual img { display: block; width: min(100%,900px); height: auto; margin-inline: auto; }
+.engineeringVisual figcaption { display: flex; justify-content: space-between; gap: 20px; padding-top: 17px; align-items: baseline; }
+.engineeringVisual figcaption span { font-size: 12px; line-height: 1.85; color: #506675; }
 .pathGrid { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); border-block: 1px solid #ccd6dd; }.pathGrid > div { padding: 30px; border-right: 1px solid #ccd6dd; }.pathGrid > div:first-child { padding-left: 0; }.pathGrid > div:last-child { border-right: 0; padding-right: 0; }.pathGrid h3 { font-size: 22px; font-weight: 500; margin: 20px 0 15px; }.pathGrid p { font-size: 13px; color: #5c6f7d; line-height: 1.95; margin: 0; }
 .engineeringNotes { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 60px; margin-top: 58px; }.engineeringNotes .eyebrow { margin-bottom: 16px; }.engineeringNotes h3 { margin: 0 0 16px; font-size: 20px; font-weight: 500; }.engineeringNotes p { font-size: 13px; color: #5c6f7d; line-height: 1.95; margin: 0 0 20px; }
 .boundary { border-left: 3px solid #426f8d; background: #e9eef1; padding: 26px 30px; margin-top: 50px; }.boundary strong { font-size: 14px; font-weight: 600; }.boundary p { font-size: 13px; line-height: 1.95; color: #506675; margin: 12px 0 14px; }
@@ -102,6 +119,12 @@
   .heading { font-size: 31px; }
   .overviewGrid, .sectionHeading, .resourceGrid { grid-template-columns: 1fr; gap: 28px; }
   .bodyCopy p { font-size: 14px; }
+  .overviewVisual { margin-top: 28px; }
+  .mechanismVisuals { grid-template-columns: 1fr; gap: 28px; margin-top: 28px; }
+  .mechanismVisuals figcaption { padding-top: 13px; }
+  .engineeringVisual { margin-bottom: 30px; }
+  .engineeringVisual figcaption { display: block; padding-top: 14px; }
+  .engineeringVisual figcaption span { display: block; margin-top: 7px; }
   .sectionHeading { margin-bottom: 36px; }
   .sectionHeading > p { font-size: 13px; }
   .principles { margin-top: 35px; }

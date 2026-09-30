@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import TechCaseStudies from "@/components/TechCaseStudies";
 import styles from "./technology.module.css";
@@ -61,7 +62,16 @@ export default function TechIntro() {
 
       <section id="overview" className={styles.section}>
         <div className={`${styles.shell} ${styles.overviewGrid}`}>
-          <div><p className={styles.eyebrow}>01 / TECHNOLOGY OVERVIEW</p><h2 className={styles.heading}>把设备运行过程，<br /><span>变成界面重构过程。</span></h2></div>
+          <div>
+            <p className={styles.eyebrow}>01 / TECHNOLOGY OVERVIEW</p><h2 className={styles.heading}>把设备运行过程，<br /><span>变成界面重构过程。</span></h2>
+            <figure className={styles.overviewVisual}>
+              <div className={styles.surfaceImages}>
+                <div><Image src="/images/tech/surface-before.webp" alt="摩擦表面显微图像，可见沟槽与表面损伤形貌" width={324} height={324} sizes="(max-width: 760px) 45vw, 22vw" /><span>磨损表面形貌</span></div>
+                <div><Image src="/images/tech/surface-reconstructed.webp" alt="重构表面的显微图像，展示较平整的表面形貌" width={324} height={324} sizes="(max-width: 760px) 45vw, 22vw" /><span>重构表面形貌</span></div>
+              </div>
+              <figcaption>摩擦表面的显微观察示例。结合形貌、成分与性能检测，评价界面重构效果。</figcaption>
+            </figure>
+          </div>
           <div className={styles.bodyCopy}>
             <p>MAT在役微观再制造技术，是融合表面工程、摩擦学与润滑技术的在线摩擦治理方法。通过功能材料介入，利用设备服役时产生的摩擦热、载荷和剪切作用，在实际摩擦区域完成微观材料去除、补充、增材、改性和组织重建。</p>
             <p>界面重构调控功能材料（Mechanically Activated Tribointerfacial Material，MAT材料）是这一过程的材料基础。以天然层状硅酸盐为基础的活性功能复合粉体，通过界面吸附、填充、剪切滑动与摩擦化学作用参与重构。</p>
@@ -83,6 +93,10 @@ export default function TechIntro() {
             <div><span>激活</span><strong>摩擦热 / 载荷 / 剪切</strong><p>吸附、富集与摩擦化学作用</p></div><b aria-hidden="true">→</b>
             <div><span>重构</span><strong>原位复合表层</strong><p>动态强化与微观增材补偿</p></div>
           </div>
+          <div className={styles.mechanismVisuals}>
+            <figure><Image src="/images/tech/interface-adsorption.webp" alt="功能颗粒吸附于摩擦接触界面，通过片状材料与吸附层隔离直接接触的示意图" width={770} height={497} sizes="(max-width: 760px) calc(100vw - 40px), 50vw" /><figcaption><strong>界面吸附与接触隔离</strong><span>功能颗粒在接触区域富集，参与固液复合润滑。</span></figcaption></figure>
+            <figure><Image src="/images/tech/interface-filling.webp" alt="片状功能颗粒与磨屑复合填充金属表面凹坑及裂缝的示意图" width={760} height={497} sizes="(max-width: 760px) calc(100vw - 40px), 50vw" /><figcaption><strong>微观填充与材料补偿</strong><span>颗粒参与表面损伤区域的填充与界面重构。</span></figcaption></figure>
+          </div>
           <div className={styles.mechanismGrid}>
             {mechanisms.map((item, i) => <div key={item.title}><span className={styles.number}>0{i + 1}</span><h3>{item.title}</h3><small>{item.label}</small><p>{item.copy}</p></div>)}
           </div>
@@ -93,6 +107,10 @@ export default function TechIntro() {
       <section id="engineering" className={styles.section}>
         <div className={styles.shell}>
           <div className={styles.sectionHeading}><div><p className={styles.eyebrow}>03 / ENGINEERING APPROACH</p><h2 className={styles.heading}>从早期强化，<br /><span>到受损界面治理。</span></h2></div><p>以设备状态确定介入时机，以检测记录评价治理效果。将材料、润滑与健康监测纳入同一条工程路径。</p></div>
+          <figure className={styles.engineeringVisual}>
+            <div><Image src="/images/tech/bearing-maintenance-system.webp" alt="电机与轴承运维部件的分解结构示意，展示电机本体、轴承及端盖部件" width={1069} height={412} sizes="(max-width: 760px) calc(100vw - 40px), 900px" /></div>
+            <figcaption><strong>电机轴承运维系统结构示意</strong><span>围绕关键摩擦部位，协同实施状态监测、精准加注与材料治理。</span></figcaption>
+          </figure>
           <div className={styles.pathGrid}>
             <div><span className={styles.number}>01 / 早期介入</span><h3>建立抗磨基础</h3><p>从装配、台架跑合、运输与调试阶段，到磨合后的服役阶段，结合设备工况实施表面强化，降低早期磨损与微动损伤。</p></div>
             <div><span className={styles.number}>02 / 在线治理</span><h3>改善表面损伤</h3><p>针对微磨损、微点蚀、浅层疲劳和表面粗糙度恶化等界面问题，先评估损伤，再制定材料与润滑介入方案。</p></div>
